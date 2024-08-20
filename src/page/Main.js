@@ -9,7 +9,7 @@ const Main = () => {
           className="size-fit rounded-full bg-slate-500 text-white p-2 px-4 hover:bg-slate-700 active:bg-slate-900"
           to={'/toast'}
         >
-          👉 Toast 테스트 페이지
+          👉 Toast 테스트 페이지 이동
         </Link>
       </div>
     </div>

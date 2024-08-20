@@ -1,4 +1,4 @@
-import { createContext, useEffect, useState } from 'react';
+import { createContext, useContext, useEffect, useState } from 'react';
 import { randomId } from './ID';
 
 const ToastContext = createContext({});
@@ -51,7 +51,7 @@ const ToastMessage = ({ data, onClose }) => {
           </svg>
         </button>
       </div>
-      <div className="pb-2 px-8 text-slate-700 text-sm font-semibold">
+      <div className="pb-4 px-8 text-slate-700 text-sm font-semibold">
         {data.message}
       </div>
       <div
@@ -67,10 +67,6 @@ const ToastMessage = ({ data, onClose }) => {
 const ToastProvider = ({ children }) => {
   const setToast = (message) => {
     setValue((prev) => {
-      console.log(
-        'setToast',
-        prev.toasts.map((t) => t.id),
-      );
       prev.toasts.push({ id: randomId(), message: message });
       return { ...prev };
     });
@@ -88,15 +84,11 @@ const ToastProvider = ({ children }) => {
     setToast: setToast,
   });
 
-  useEffect(() => {
-    console.log(value.toasts.map((t) => t.id));
-  }, [value]);
-
   return (
     <ToastContext.Provider value={value}>
       {children}
       {value.toasts?.length > 0 && (
-        <div className="absolute top-0 right-0 z-10 transition-height duration-1000 ease-in-out h-fit">
+        <div className="absolute top-0 right-0 z-10 transition-height duration-1000 ease-in-out h-fit overflow-hidden">
           {value.toasts.map((toast) => (
             <ToastMessage key={toast.id} data={toast} onClose={removeToast} />
           ))}
@@ -106,4 +98,9 @@ const ToastProvider = ({ children }) => {
   );
 };
 
-export { ToastProvider, ToastContext };
+const useToast = () => {
+  const { setToast } = useContext(ToastContext);
+  return setToast;
+};
+
+export { ToastProvider, ToastContext, useToast };
