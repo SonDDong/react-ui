@@ -7,6 +7,7 @@
 ## 🔍 다음의 기능을 제공합니다.
 
 - Toast: 5초동안 우측 상단에 토스트 메시지를 제공합니다.
+  <img width="360" src="https://github.com/user-attachments/assets/9ba1f971-2c48-4133-9008-f26eef4912ec" />
 
 ## 🚧 앞으로의 여정
 

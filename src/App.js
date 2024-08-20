@@ -6,7 +6,7 @@ import Layout from './page/Layout';
 
 function App() {
   return (
-    <div className="w-screen h-screen p-4">
+    <div className="w-screen h-screen">
       <ToastProvider>
         <Router>
           <Layout>
