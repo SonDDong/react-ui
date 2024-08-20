@@ -32,7 +32,7 @@ const ToastMessage = ({ data, onClose }) => {
     >
       <div className="flex w-full justify-end px-2">
         <button
-          className="w-6 h-6 text-slate-700 hover:text-teal-500 active:bg-teal-50 rounded-full flex items-center justify-center"
+          className="w-4 h-4 text-slate-700 hover:text-teal-500 active:bg-teal-50 rounded-full flex items-center justify-center"
           onClick={handleClose}
         >
           <svg
@@ -51,7 +51,7 @@ const ToastMessage = ({ data, onClose }) => {
           </svg>
         </button>
       </div>
-      <div className="pb-2 px-4 text-slate-700 text-sm font-semibold">
+      <div className="pb-2 px-8 text-slate-700 text-sm font-semibold">
         {data.message}
       </div>
       <div
