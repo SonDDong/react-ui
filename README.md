@@ -10,6 +10,10 @@
   </br>
   <img src="https://github.com/user-attachments/assets/9ba1f971-2c48-4133-9008-f26eef4912ec" />
 
+- Tabs
+  </br>
+  <img src="https://github.com/user-attachments/assets/e283c62b-e247-49e5-b518-e89e92c239ce" />
+
 ## 🚧 앞으로의 여정
 
 - Theme, React-flow 기반 도구

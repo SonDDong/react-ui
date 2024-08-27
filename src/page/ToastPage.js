@@ -19,7 +19,7 @@ const ToastPage = () => {
           className="size-fit rounded-full bg-slate-500 text-white p-2 px-4 hover:bg-slate-700 active:bg-slate-900"
           onClick={() => toast(message)}
         >
-          Toast 팝업 테스트
+          Toast 메시지 테스트
         </button>
       </div>
     </div>

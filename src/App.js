@@ -3,6 +3,7 @@ import { ToastProvider } from './component/Toast';
 import Main from './page/Main';
 import ToastPage from './page/ToastPage';
 import Layout from './page/Layout';
+import TabsPage from './page/TabsPage';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Main />} />
               <Route path="/toast" element={<ToastPage />} />
+              <Route path="/tabs" element={<TabsPage />} />
               <Route path="*" element={<>Not Found</>} />
             </Routes>
           </Layout>
